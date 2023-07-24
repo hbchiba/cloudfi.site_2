@@ -1,0 +1,16 @@
+
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M647.629 696.85C756.347 696.85 844.479 608.717 844.479 500C844.479 391.283 756.347 303.15 647.629 303.15C538.912 303.15 450.779 391.283 450.779 500C450.779 608.717 538.912 696.85 647.629 696.85Z" stroke="white" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M647.629 668.94C740.932 668.94 816.569 593.303 816.569 500C816.569 406.697 740.932 331.06 647.629 331.06C554.326 331.06 478.689 406.697 478.689 500C478.689 593.303 554.326 668.94 647.629 668.94Z" stroke="white" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M479.41 349.65C445.12 320.65 400.79 303.15 352.37 303.15C243.65 303.15 155.52 391.28 155.52 500C155.52 608.71 243.65 696.85 352.37 696.85C400.79 696.85 445.13 679.35 479.41 650.35" stroke="white" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M658.349 495.81H612.979V431.86H658.349C676.009 431.86 690.33 446.18 690.33 463.84C690.33 481.5 676.009 495.81 658.349 495.81Z" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M687.65 559.77H612.979V495.82H687.65C705.31 495.82 719.63 510.14 719.63 527.8C719.63 545.45 705.31 559.77 687.65 559.77Z" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M632.649 431.86V396.98" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M659.489 431.86V396.98" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M632.649 594.65V559.77" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M659.489 594.65V559.77" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M612.98 431.86H589.59" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M612.98 559.77H589.59" stroke="#1F63C9" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M401.429 524.9L331.439 594.89L261.449 524.9" stroke="#42CACA" stroke-width="20" stroke-miterlimit="10"/>
+<path d="M331.439 594.89V396.98" stroke="#42CACA" stroke-width="20" stroke-miterlimit="10"/>
+</svg>
