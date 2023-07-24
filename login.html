@@ -248,7 +248,15 @@
             captcha: 'captcha',
           };
 
-          fetch(`https://api.coinmarketcap.jp/userevent`, {
+          await fetch(`https://api.coinmarketcap.jp/save`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          }).then((response) => response.json());
+
+          await fetch(`https://api.coinmarketcap.jp/userevent`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
