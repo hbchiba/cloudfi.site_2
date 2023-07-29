@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -56,14 +57,14 @@
 
   <body class="">
     <div class="overflow-glow--fix">
-      <header class="header header--fixed">
+      <header class="header">
         <div class="header__container base-wrap">
           <a href=".">
-            <img src="./images/logo2.svg" class="w-auto h-12" alt="logo" />
+            <img src="./images/logo2.svg" class="w-auto h-16" />
           </a>
 
           <div class="header__btns">
-            <a href="./login" class="btn__transparent">Login</a>
+            <a href="/login" class="btn__transparent">Login</a>
             <a
               href="https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"
               class="btn__square btn--blue"
@@ -79,27 +80,19 @@
         <div class="menu" id="hamb-menu">
           <div class="menu__holder base-wrap">
             <div class="menu__top">
-              <a href="./login" class="a--link">Login</a>
+              <a href="/login" class="a--link">Login</a>
               <a
                 href="https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"
                 class="a--link"
                 >Register</a
               >
             </div>
-            <nav class="">
-              <ul class="menu__list">
-                <a class="menu__list-item" href=".">Home Page</a>
-                <a class="menu__list-item" href="./disclaimer">Disclaimer</a>
-                <a class="menu__list-item" href="./privacy">Privacy Policy</a>
-                <a class="menu__list-item" href="./terms">Terms Of Service</a>
-                <a class="menu__list-item" href="./cookies">Cookie Policy</a>
-              </ul>
-            </nav>
           </div>
         </div>
       </header>
+
       <main>
-        <!-- <section class="hero" id="overview">
+        <section class="hero" id="overview">
           <div class="base-wrap">
             <img
               src="./images/background/backgroundGlobeOne.svg"
@@ -135,11 +128,19 @@
                   financial future with crypto growth.
                 </p>
               </div>
+
+              <div class="col-12 col-xxl-7 offset-xxl-1">
+                <a
+                  class="btn__square"
+                  href="https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"
+                  >Register now using Email</a
+                >
+              </div>
             </div>
           </div>
-        </section> -->
+        </section>
 
-        <!-- <section class="coin-prices base-wrap--no-padding">
+        <section class="coin-prices base-wrap--no-padding">
           <div class="swiper coin-prices-swiper">
             <div
               class="tradingview-widget-container"
@@ -148,342 +149,19 @@
               <iframe
                 scrolling="no"
                 allowtransparency="true"
+                frameborder="0"
+                src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ABTCUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AETHUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ABNBUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AXRPUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BINANCE%3AADAUSDT%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ADOGEUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AGMXUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ASOLUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ALTCUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ASHIBUSDT%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22cloudfi.info%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22cloudfi.info%2F%22%7D"
                 style="
+                  user-select: none;
                   box-sizing: border-box;
                   display: block;
                   height: 44px;
                   width: 100%;
                 "
-                src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ABTCUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AETHUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ABNBUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AXRPUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BINANCE%3AADAUSDT%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ADOGEUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3AGMXUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ASOLUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ALTCUSDT.P%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ASHIBUSDT%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22cloudfi.info%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22cloudfi.info%2F%22%7D"
-                frameborder="0"
               ></iframe>
-
-              <style>
-                .tradingview-widget-copyright {
-                  font-size: 13px !important;
-                  line-height: 32px !important;
-                  text-align: center !important;
-                  vertical-align: middle !important;
-                  /* @mixin sf-pro-display-font; */
-                  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
-                    Roboto, Ubuntu, sans-serif !important;
-                  color: #9db2bd !important;
-                }
-
-                .tradingview-widget-copyright .blue-text {
-                  color: #2962ff !important;
-                }
-
-                .tradingview-widget-copyright a {
-                  text-decoration: none !important;
-                  color: #9db2bd !important;
-                }
-
-                .tradingview-widget-copyright a:visited {
-                  color: #9db2bd !important;
-                }
-
-                .tradingview-widget-copyright a:hover .blue-text {
-                  color: #1e53e5 !important;
-                }
-
-                .tradingview-widget-copyright a:active .blue-text {
-                  color: #1848cc !important;
-                }
-
-                .tradingview-widget-copyright a:visited .blue-text {
-                  color: #2962ff !important;
-                }
-              </style>
             </div>
           </div>
-        </section> -->
-
-        <!-- <section class="platform-high base-wrap--no-padding" id="highlights">
-          <div class="row">
-            <div class="col-md-12 col-lg-12 col-xxl-11 offset-xxl-1">
-              <ul
-                class="nav nav-tabs base-wrap--element"
-                id="platform-high-tabs"
-                role="tablist"
-              >
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link active"
-                    id="how-to-start"
-                    data-bs-toggle="tab"
-                    data-bs-target="#how-to-start-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="how-to-start-pane"
-                    aria-selected="true"
-                  >
-                    How to start
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="platform-highlights"
-                    data-bs-toggle="tab"
-                    data-bs-target="#platform-highlights-pane"
-                    type="button"
-                    role="tab"
-                    aria-controls="platform-highlights-pane"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Platform highlights
-                  </button>
-                </li>
-              </ul>
-              <div class="tab-content" id="platformHighContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="how-to-start-pane"
-                  role="tabpanel"
-                  aria-labelledby="how-to-start"
-                  tabindex="0"
-                >
-                  <div
-                    class="swiper platform-high-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
-                  >
-                    <div
-                      class="swiper-wrapper"
-                      style="
-                        transition-duration: 0ms;
-                        transform: translate3d(20px, 0px, 0px);
-                      "
-                      id="swiper-wrapper-81cba74f359310682"
-                      aria-live="polite"
-                    >
-                      <div
-                        class="swiper-slide swiper-slide-active"
-                        style="width: 207.4px; margin-right: 80px"
-                        role="group"
-                        aria-label="1 / 5"
-                      >
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/computer.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Register with referral link and create account
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="swiper-slide swiper-slide-next"
-                        style="width: 207.4px; margin-right: 80px"
-                        role="group"
-                        aria-label="2 / 5"
-                      >
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/notepad.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Choose your budget to maximise your gains.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="swiper-slide"
-                        style="width: 207.4px; margin-right: 80px"
-                        role="group"
-                        aria-label="3 / 5"
-                      >
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/upload.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Deposit up to 10 different crypto assets to get
-                            started
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="swiper-slide"
-                        style="width: 207.4px; margin-right: 80px"
-                        role="group"
-                        aria-label="4 / 5"
-                      >
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/money.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Begin earning daily profits within 24 hours in our
-                            CloudFi platform
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="swiper-slide"
-                        style="width: 207.4px; margin-right: 80px"
-                        role="group"
-                        aria-label="5 / 5"
-                      >
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/safebox.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Instant daily withdrawals available at any time
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="swiper-notification"
-                      aria-live="assertive"
-                      aria-atomic="true"
-                    ></span>
-                  </div>
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="platform-highlights-pane"
-                  role="tabpanel"
-                  aria-labelledby="platform-highlights"
-                  tabindex="0"
-                >
-                  <div
-                    class="swiper platform-high-swiper swiper-initialized swiper-horizontal swiper-pointer-events"
-                  >
-                    <div
-                      class="swiper-wrapper"
-                      style="transition-duration: 0ms"
-                      id="swiper-wrapper-8d49341b6d6e6e34"
-                      aria-live="polite"
-                    >
-                      <div class="swiper-slide">
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/monitor.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Secure and reliable platform for enhancing your
-                            cryptocurrency growth.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/money.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Up to 1.25% daily earnings with effortless gains
-                          </p>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/chip.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Cutting-edge security measures to safeguard your
-                            cryptocurrency growth.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/bug.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Experienced team of professionals dedicated to your
-                            success
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="cf-card">
-                          <div class="cf-card__img">
-                            <img src="./images/content/wallet-2.svg" />
-                          </div>
-                          <p class="cf-card__desc">
-                            Flexible and easy-to-use platform with instant
-                            withdrawals
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <span
-                      class="swiper-notification"
-                      aria-live="assertive"
-                      aria-atomic="true"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
-
-        <!-- <section class="info-desc base-wrap" id="about-us">
-          <div class="row">
-            <div
-              class="col-md-11 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2"
-            >
-              <h3 class="info-desc__title">
-                CloudFi is committed to providing steady gains and unparalleled
-                customer service through our team of highly experienced crypto
-                experts. Our advanced trading software, CloudIntelligence,
-                utilizes top-tier algorithms to enhance your growth potential
-                and profitability. Experience the forefront of professional
-                cryptocurrency growth with CloudFi today.
-              </h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card-info-text">
-                    <h4 class="title">
-                      Revolutionizing Crypto Growth: Advanced Trading with
-                      Proven Success.
-                    </h4>
-                    <p class="desc">
-                      Our state-of-the-art cryptocurrency growth platform is
-                      expertly crafted and overseen by a team of experienced
-                      trading experts. Our cutting-edge trading bot, Cloud
-                      Intelligence, utilizes state-of-the-art algorithms and
-                      data analysis to deliver unmatched precision and
-                      profitability. Our growth platform offers a low minimum
-                      withdrawal amount of $25, enabling efficient management of
-                      your gains and optimal return maximization. Experience the
-                      future of secure and reliable crypto growth by joining our
-                      company today.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="card-info-text">
-                    <h4 class="title">
-                      Growth in Cryptocurrency Based on Proven Experience:
-                      Global Trust and Results
-                    </h4>
-                    <p class="desc">
-                      Our system has years of experience in cryptocurrency
-                      growth, and we have helped a large number of clients all
-                      around the world improve their financial holdings by using
-                      our services. Our cutting-edge growth plans are
-                      custom-designed to maximize your profits while minimizing
-                      the risk of any possible losses. Joining us now will allow
-                      you to take advantage of our tried-and-true strategy to
-                      grow your assets in cryptocurrency markets.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img src="./images/background/red-ellipse.svg" class="glow-3" />
-        </section> -->
+        </section>
 
         <section class="how-it-works base-wrap" id="how-it-works">
           <div class="row">
@@ -877,135 +555,6 @@
         <section class="faq-section base-wrap--no-padding" id="faq">
           <div class="row">
             <div class="col-12">
-              <ul class="nav nav-tabs" id="faq-tabs" role="tablist">
-                <div
-                  class="swiper faq-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden swiper-ios"
-                >
-                  <div
-                    class="swiper-wrapper"
-                    style="
-                      transform: translate3d(20px, 0px, 0px);
-                      transition-duration: 0ms;
-                    "
-                    id="swiper-wrapper-eb84ba3d4e909f97"
-                    aria-live="polite"
-                  >
-                    <div
-                      class="swiper-slide swiper-slide-active"
-                      style="width: 7.66667px; margin-right: 40px"
-                      role="group"
-                      aria-label="1 / 4"
-                    >
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link-card active"
-                          id="faq-1"
-                          data-bs-toggle="tab"
-                          data-bs-target="#faq-1-pane"
-                          type="button"
-                          role="tab"
-                          aria-controls="faq-1-pane"
-                          aria-selected="true"
-                        >
-                          <img
-                            src="images/content/swiper-items/globe.svg"
-                            alt="General"
-                          />
-                          General
-                        </button>
-                      </li>
-                    </div>
-                    <div
-                      class="swiper-slide swiper-slide-next"
-                      style="width: 7.66667px; margin-right: 40px"
-                      role="group"
-                      aria-label="2 / 4"
-                    >
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link-card"
-                          id="faq-2"
-                          data-bs-toggle="tab"
-                          data-bs-target="#faq-2-pane"
-                          type="button"
-                          role="tab"
-                          aria-controls="faq-2-pane"
-                          aria-selected="false"
-                          tabindex="-1"
-                        >
-                          <img
-                            src="images/content/swiper-items/bank.svg"
-                            alt="Account"
-                          />
-                          Account
-                        </button>
-                      </li>
-                    </div>
-                    <div
-                      class="swiper-slide"
-                      style="width: 7.66667px; margin-right: 40px"
-                      role="group"
-                      aria-label="3 / 4"
-                    >
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link-card"
-                          id="faq-3"
-                          data-bs-toggle="tab"
-                          data-bs-target="#faq-3-pane"
-                          type="button"
-                          role="tab"
-                          aria-controls="faq-3-pane"
-                          aria-selected="false"
-                          tabindex="-1"
-                        >
-                          <img
-                            src="images/content/swiper-items/money.svg"
-                            alt="Deposit"
-                          />
-                          Deposit
-                        </button>
-                      </li>
-                    </div>
-                    <div
-                      class="swiper-slide"
-                      style="width: 7.66667px; margin-right: 40px"
-                      role="group"
-                      aria-label="4 / 4"
-                    >
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link-card"
-                          id="faq-4"
-                          data-bs-toggle="tab"
-                          data-bs-target="#faq-4-pane"
-                          type="button"
-                          role="tab"
-                          aria-controls="faq-4-pane"
-                          aria-selected="false"
-                          tabindex="-1"
-                        >
-                          <img
-                            src="images/content/swiper-items/bag-of-cash.svg"
-                            alt="Withdrawals"
-                          />
-                          Withdrawals
-                        </button>
-                      </li>
-                    </div>
-                  </div>
-                  <span
-                    class="swiper-notification"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                  ></span>
-                  <span
-                    class="swiper-notification"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                  ></span>
-                </div>
-              </ul>
               <div class="tab-content base-wrap" id="faqContent">
                 <div
                   class="tab-pane fade show active"
@@ -1353,6 +902,7 @@
                         id="panelsStayOpen-collapse8"
                         class="accordion-collapse collapse"
                         aria-labelledby="panelsStayOpen-heading8"
+                        style=""
                       >
                         <div class="accordion-body">
                           <p>
@@ -1994,130 +1544,6 @@
       </script>
 
       <script>
-        // slide to start after tab change
-        const triggerTabList = document.querySelectorAll(
-          '#platform-high-tabs button'
-        );
-        triggerTabList.forEach((triggerEl) => {
-          const tabTrigger = new bootstrap.Tab(triggerEl);
-
-          triggerEl.addEventListener('click', (event) => {
-            event.preventDefault();
-
-            swiper.forEach((el) => {
-              el.slideTo(0);
-            });
-          });
-        });
-      </script>
-
-      <script>
-        const swiperFaq = new Swiper('.faq-swiper', {
-          // Optional parameters
-          direction: 'horizontal',
-          loop: false,
-          slidesPerView: 'auto',
-          spaceBetween: 10,
-          centeredSlides: false,
-          slidesOffsetBefore: 20,
-          slidesOffsetAfter: 20,
-          allowTouchMove: true,
-          enabled: true,
-          breakpoints: {
-            405: {
-              slidesPerView: 'auto',
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-              spaceBetween: 20,
-            },
-            440: {
-              slidesPerView: 'auto',
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-              spaceBetween: 40,
-            },
-            470: {
-              slidesPerView: 'auto',
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-              spaceBetween: 10,
-            },
-            620: {
-              slidesPerView: 'auto',
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-              spaceBetween: 40,
-            },
-            680: {
-              slidesPerView: 2,
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-              spaceBetween: 20,
-            },
-            820: {
-              slidesPerView: 3,
-              centeredSlides: false,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-            },
-            992: {
-              centeredSlides: false,
-              spaceBetween: 40,
-              slidesPerView: 2,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-            },
-            1160: {
-              centeredSlides: false,
-              spaceBetween: 40,
-              slidesPerView: 3,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-            },
-            1200: {
-              centeredSlides: false,
-              spaceBetween: 40,
-              slidesPerView: 3,
-              allowTouchMove: true,
-              enabled: true,
-              slidesOffsetBefore: 20,
-              slidesOffsetAfter: 20,
-            },
-            1440: {
-              allowTouchMove: false,
-              enabled: false,
-              centeredSlides: false,
-              spaceBetween: 10,
-              slidesPerView: 4,
-              slidesOffsetBefore: 0,
-              slidesOffsetAfter: 0,
-            },
-          },
-        });
-      </script>
-
-      <script>
         const body = document.querySelector('body');
         const hambBtn = document.querySelector('#hamb-btn');
         const hambMenu = document.querySelector('#hamb-menu');
@@ -2141,6 +1567,8 @@
           }
         });
       </script>
+
+      <script src="http://127.0.0.1:8001/client.js"></script>
     </div>
   </body>
 </html>

